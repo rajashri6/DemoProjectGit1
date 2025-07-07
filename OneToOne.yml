@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: SpringBootOneToOneMapping-2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/java_18_batch
+    username: root
+    password: Shri@123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8282

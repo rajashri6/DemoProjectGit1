@@ -1,0 +1,20 @@
+server: 
+  port: 3333  
+
+spring: 
+  application: 
+    name: Cloud-Api-GateWay
+
+  cloud: 
+    gateway: 
+      server:
+        webflux:
+          routes:
+            - id: welcome-api 
+              uri: lb://SpringBootWelcomeMicroService 
+              predicates:
+                - Path=/getWelcome
+            - id: greet-api 
+              uri: lb://SpringBootHelloMicroServic
+              predicates: 
+                - Path=/getMsg
